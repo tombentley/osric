@@ -102,9 +102,9 @@ shared class CeylonTestBrowserTool extends AbstractTestTool {
     }
     
     void processColors(JList<JString> args) {
-        String reset = OSUtil.Color.reset.escape();
-        String green = OSUtil.Color.green.escape();
-        String red = OSUtil.Color.red.escape();
+        String? reset = OSUtil.Color.reset.escape();
+        String? green = OSUtil.Color.green.escape();
+        String? red = OSUtil.Color.red.escape();
         if (reset exists, green exists, exists red) {
             System.setProperty(colorReset, reset);
             System.setProperty(colorGreen, green);
