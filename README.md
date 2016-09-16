@@ -34,6 +34,7 @@ You now have the `ceylon test-browser` tool (which is a shameless ripoff of the
 `ceylon test` tool).
 
     # finally run the tool on a module of tests
+    # you'll need firefox on your $PATH
     ceylon test-browser com.github.tombentley.osric.test.subject/1.0.0
     
 That will run the test module `com.github.tombentley.osric.test.subject` in the browser.
