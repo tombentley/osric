@@ -1,0 +1,4 @@
+; Plugin definition for the "ceylon test-browser" tool
+summary=Executes tests in a web browser
+module=com.github.tombentley.osric.server/1.0.0
+class=com.github.tombentley.osric.server.CeylonTestBrowserTool
