@@ -35,7 +35,18 @@ BrowserProcess firefox(SocketAddress server, String executable="firefox", String
     };
 }
 
+BrowserProcess chromium(SocketAddress server, String executable="chromium-browser") {
+    return object extends BrowserProcess(createProcess(executable, [ 
+        
+    "http://``server.address``:``server.port``/"])) {
+        /*shared actual void kill() {
+            super.kill();
+            //createProcess(executable, ["-no-remote", "-P", profileName, "-killAll"]);
+         }*/
+    };
+}
 
-
-
+BrowserProcess chrome(SocketAddress server, String executable="chrome") {
+    return chromium(server, "chrome");
+}
 
